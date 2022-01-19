@@ -1,0 +1,51 @@
+package quiz;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Labtest3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("How many words do you want to input?");
+        int number = input.nextInt();
+
+        System.out.println("Input " + number + " words:");
+        ArrayList<String> words = new ArrayList<>();
+        for(int i = 0; i < number; i++) {
+            words.add(input.next());
+        }
+
+        System.out.println("Word count:");
+
+        ArrayList<String> a = b(words);
+        for (String word: a) {
+            int c = count(words, word);
+            System.out.println(word + "," + c);
+        }
+    }
+
+    public static int count(ArrayList<String> amounts, String x) {
+        int count = 0;
+        for (String s: amounts) {
+            if (s.equals(x)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static ArrayList<String> b(ArrayList<String> amounts) {
+        ArrayList<String> word = new ArrayList<>();
+        for(String s: amounts) {
+            if (! word.contains(s)) {
+                word.add(s);
+            }
+        }
+        return word;
+	
+	}
+
+}
