@@ -1,0 +1,14 @@
+How many words do you want to input?
+6
+Input 6 words:
+hello
+world
+hello
+germany
+hello
+berlin
+Word count:
+hello,3
+world,1
+germany,1
+berlin,1
